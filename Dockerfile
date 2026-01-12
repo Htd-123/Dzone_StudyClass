@@ -1,14 +1,12 @@
-# Dùng Nginx nhẹ, ổn định
-FROM nginx:alpine
+FROM node:18-alpine
 
-# Xóa config mặc định
-RUN rm -rf /usr/share/nginx/html/*
+WORKDIR /app
 
-# Copy toàn bộ source web vào nginx
-COPY . /usr/share/nginx/html
+COPY package*.json ./
+RUN npm install
 
-# Expose port 80 (Render tự map)
-EXPOSE 80
+COPY . .
 
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 3000
+
+CMD ["node", "app.js"]
