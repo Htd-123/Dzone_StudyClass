@@ -1,0 +1,20 @@
+{
+  "name": "dzone_studyclass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "htd",
+    "td"
+  ],
+  "author": "htd td",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "pg": "^8.16.3"
+  }
+}
